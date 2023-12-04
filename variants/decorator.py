@@ -8,8 +8,8 @@ class Colors:
     CYAN = '\033[96m'
     WHITE = '\033[97m'
 
-    DEBUG = GREY
-    INFO = WHITE
+    DEBUG = WHITE
+    INFO = BLUE
     WARNING = YELLOW
     ERROR = RED
 
