@@ -1,95 +1,78 @@
-class Colors:
-    GREY = '\033[90m'
-    RED = '\033[91m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    BLUE = '\033[94m'
-    PURPLE = '\033[95m'
-    CYAN = '\033[96m'
-    WHITE = '\033[97m'
-
-    DEBUG = WHITE
-    INFO = BLUE
-    WARNING = YELLOW
-    ERROR = RED
-
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-
-    RESET = '\033[0m'
+from .ansi_codes import ANSICode
 
 
 def complete(func):
     def wrapper(*args, **kwargs) -> str:
-        return func(*args, **kwargs) + args[0] + Colors.RESET
+        return func(*args, **kwargs) + args[0] + ANSICode.RESET
+
     return wrapper
 
 
 @complete
 def grey(s: str):
-    return Colors.GREY
+    return ANSICode.GREY
 
 
 @complete
 def red(s: str):
-    return Colors.RED
+    return ANSICode.RED
 
 
 @complete
 def green(s: str):
-    return Colors.GREEN
+    return ANSICode.GREEN
 
 
 @complete
 def yellow(s: str):
-    return Colors.YELLOW
+    return ANSICode.YELLOW
 
 
 @complete
 def blue(s: str):
-    return Colors.BLUE
+    return ANSICode.BLUE
 
 
 @complete
 def purple(s: str):
-    return Colors.PURPLE
+    return ANSICode.PURPLE
 
 
 @complete
 def cyan(s: str):
-    return Colors.CYAN
+    return ANSICode.CYAN
 
 
 @complete
 def white(s: str):
-    return Colors.WHITE
+    return ANSICode.WHITE
 
 
 @complete
 def debug(s: str):
-    return Colors.DEBUG
+    return ANSICode.WHITE
 
 
 @complete
 def info(s: str):
-    return Colors.INFO
+    return ANSICode.BLUE
 
 
 @complete
 def warning(s: str):
-    return Colors.WARNING
+    return ANSICode.YELLOW
 
 
 @complete
 def error(s: str):
-    return Colors.ERROR
+    return ANSICode.RED
 
 
 @complete
 def bold(s: str):
-    return Colors.BOLD
+    return ANSICode.BOLD
 
 
 @complete
 def underline(s: str):
-    return Colors.UNDERLINE
+    return ANSICode.UNDERLINE

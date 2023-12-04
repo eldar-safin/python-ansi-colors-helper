@@ -1,24 +1,48 @@
 import sys
-from decorator import *
+from variants.class_ import *
+from variants.decorator import *
 
 
 def main():
-    print(grey('Grey color'))
-    print(red('Red color'))
-    print(green('Green color'))
-    print(yellow('Yellow color'))
-    print(blue('Blue color'))
-    print(purple('Purple color'))
-    print(cyan('Cyan color'))
-    print(white('White color'))
+    print(Yellow(Bold('Class-based variant:')),
+          '\n',
+          Grey('Grey color'),
+          Red('Red color'),
+          Green('Green color'),
+          Yellow('Yellow color'),
+          Blue('Blue color'),
+          Purple('Purple color'),
+          Cyan('Cyan color'),
+          White('White color'),
+          '\n',
+          Debug('Debug message'),
+          Info('Info message'),
+          Warn('Warning message'),
+          Error('Error message'),
+          '\n',
+          Bold('Bold font'),
+          Underline('Underline font'))
+
     print()
-    print(debug('Debug message'))
-    print(info('Info message'))
-    print(warning('Warning message'))
-    print(error('Error message'))
-    print()
-    print(bold('Bold font'))
-    print(underline('Underline font'))
+
+    print(yellow(bold('Decorator-based variant')),
+          '\n',
+          grey('Grey color'),
+          red('Red color'),
+          green('Green color'),
+          yellow('Yellow color'),
+          blue('Blue color'),
+          purple('Purple color'),
+          cyan('Cyan color'),
+          white('White color'),
+          '\n',
+          debug('Debug message'),
+          info('Info message'),
+          warning('Warning message'),
+          error('Error message'),
+          '\n',
+          bold('Bold font'),
+          underline('Underline font'))
 
 
 if __name__ == '__main__':
